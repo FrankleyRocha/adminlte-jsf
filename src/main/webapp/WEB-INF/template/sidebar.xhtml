@@ -27,40 +27,42 @@
 					<!--begin::Sidebar Menu-->
 					<ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview"
 						role="menu" data-accordion="false">
-						<li class="nav-item"><a href="#" class="nav-link"><i
+						<li class="nav-item #{sidebarBean.hasActivated('pages/index')?'menu-open':''}"><a href="#" class="nav-link #{sidebarBean.hasActivated('pages/index')?'active':''}"><i
 								class="nav-icon bi bi-speedometer"></i>
 								<p>
 									Dashboard <i class="nav-arrow bi bi-chevron-right"></i>
 								</p></a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/index.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
-										<p>Dashboard v1</p></a></li>
+									class="nav-link #{sidebarBean.hasActivated('index.xhtml')?'active':''}"><i class="nav-icon bi bi-circle"></i>
+										<p>Dashboard v1</p></a>
+									
+								</li>
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/index2.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+									class="nav-link #{sidebarBean.hasActivated('index2.xhtml')?'active':''}"><i class="nav-icon bi bi-circle"></i>
 										<p>Dashboard v2</p></a></li>
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/index3.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+									class="nav-link #{sidebarBean.hasActivated('index3.xhtml')?'active':''}"><i class="nav-icon bi bi-circle"></i>
 										<p>Dashboard v3</p></a></li>
 							</ul></li>
-						<li class="nav-item"><a href="#" class="nav-link"><i
+						<li class="nav-item #{sidebarBean.hasActivated('pages/widgets')?'menu-open':''}"><a href="#" class="nav-link #{sidebarBean.hasActivated('pages/widgets')?'active':''}"><i
 								class="nav-icon bi bi-box-seam-fill"></i>
 								<p>
 									Widgets <i class="nav-arrow bi bi-chevron-right"></i>
 								</p></a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/widgets/small-box.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+									class="nav-link #{sidebarBean.hasActivated('widgets/small-box')?'active':''}"><i class="nav-icon bi bi-circle"></i>
 										<p>Small Box</p></a></li>
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/widgets/info-box.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+									class="nav-link #{sidebarBean.hasActivated('widgets/info-box')?'active':''}"><i class="nav-icon bi bi-circle"></i>
 										<p>info Box</p></a></li>
 								<li class="nav-item"><a href="#{request.getContextPath()}/pages/widgets/cards.xhtml"
-									class="nav-link"><i class="nav-icon bi bi-circle"></i>
+									class="nav-link #{sidebarBean.hasActivated('widgets/cards')?'active':''}"><i class="nav-icon bi bi-circle"></i>
 										<p>Cards</p></a></li>
 							</ul></li>
-						<li class="nav-item menu-open"><a href="#"
-							class="nav-link active"><i
+						<li class="nav-item"><a href="#"
+							class="nav-link"><i
 								class="nav-icon bi bi-clipboard-fill"></i>
 								<p>
 									Layout Options <span
@@ -83,7 +85,7 @@
 									class="nav-link"><i class="nav-icon bi bi-circle"></i>
 										<p>Sidebar Mini</p></a></li>
 								<li class="nav-item"><a
-									href="../layout/collapsed-sidebar.html" class="nav-link active"><i
+									href="../layout/collapsed-sidebar.html" class="nav-link"><i
 										class="nav-icon bi bi-circle"></i>
 										<p>
 											Sidebar Mini <small>+ Collapsed</small>
