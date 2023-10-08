@@ -23,5 +23,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Shorthand for $( document ).ready()
 $(() => {
-    console.log( "Testando ready!" );
+	console.log( "Testando ready!" );        
 });
