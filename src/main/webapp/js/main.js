@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Gerencia links ativos e menu
 $(() => {
-	console.log( "contextPath", contextPath );	
-	console.log( "requestURI", requestURI );
+	//console.log( "contextPath", contextPath );	
+	//console.log( "requestURI", requestURI );
 		
 	let opcoesMenu = $('.sidebar-menu > .nav-item');
 	
