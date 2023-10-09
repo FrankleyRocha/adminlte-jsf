@@ -20,8 +20,30 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 });
 
-
-// Shorthand for $( document ).ready()
+// Gerencia links ativos e menu
 $(() => {
-	console.log( "Testando ready!" );        
+	console.log( "contextPath", contextPath );	
+	console.log( "requestURI", requestURI );
+		
+	let opcoesMenu = $('.sidebar-menu > .nav-item');
+	
+	for(let opcaoMenu of opcoesMenu){
+					
+		let activeLinks =
+			$( opcaoMenu )
+				.find( `.nav-treeview > .nav-item > .nav-link[href="${requestURI}"]` );
+									
+		if(activeLinks.length > 0){
+									
+			$( opcaoMenu ).addClass( 'menu-open' );
+			$( opcaoMenu ).addClass( 'active' );
+		
+			for(let activeLink of activeLinks){
+				$( activeLink ).addClass( 'active' );
+			}
+																
+		}
+										
+	}		
+	
 });
