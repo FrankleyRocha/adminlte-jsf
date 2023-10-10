@@ -2,13 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	dir="rtl"	
+>
 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title><ui:insert name="pageTitle">AdminLTE v4</ui:insert></title>
+	<title><ui:insert name="pageTitle">AdminLTE 4 | Layout RTL</ui:insert></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="title" content="AdminLTE v4 | Dashboard" />
+	<meta name="title" content="AdminLTE 4 | Layout RTL" />
 	<meta name="author" content="Frankley Francalino da Rocha" />
 	<meta name="description"
 		content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS." />
@@ -34,15 +36,16 @@
 		href="#{request.getContextPath()}/css/bootstrap/bootstrap.min.css" />
 
 	<link rel="stylesheet"
-		href="#{request.getContextPath()}/css/adminlte/adminlte.min.css" />
+		href="#{request.getContextPath()}/css/adminlte/adminlte.rtl.min.css" />
 		
 	<!-- Estilos personalizados -->
 	<ui:insert name="estilos"></ui:insert>		
 
 </h:head>
 
-<body
-	class="layout-fixed sidebar-expand-lg sidebar-mini bg-body-tertiary app-loaded sidebar-collapse">
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+
+
 	<!--begin::App Wrapper-->
 	<div class="app-wrapper">
 

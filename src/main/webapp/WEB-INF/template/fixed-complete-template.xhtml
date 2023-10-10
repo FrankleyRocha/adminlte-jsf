@@ -19,7 +19,7 @@
 		href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
 		integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
 		crossorigin="anonymous" />
-		
+
 	<link rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.1.0/styles/overlayscrollbars.min.css"
 		integrity="sha256-LWLZPJ7X1jJLI5OG5695qDemW1qQ7lNdbTfQ64ylbUY="
@@ -35,69 +35,77 @@
 
 	<link rel="stylesheet"
 		href="#{request.getContextPath()}/css/adminlte/adminlte.min.css" />
-		
+
 	<!-- Estilos personalizados -->
-	<ui:insert name="estilos"></ui:insert>		
+	<ui:insert name="estilos"></ui:insert>
 
 </h:head>
 
-<body
-	class="layout-fixed sidebar-expand-lg sidebar-mini bg-body-tertiary app-loaded sidebar-collapse">
+<body class="layout-fixed-complete sidebar-expand-lg bg-body-tertiary">
 	<!--begin::App Wrapper-->
 	<div class="app-wrapper">
-
-		<ui:insert name="navBar">
-			<ui:include src="/WEB-INF/template/navbar.xhtml" />
-		</ui:insert>
-
+		<!--begin::Sidebar-->
 		<ui:insert name="sideBar">
 			<ui:include src="/WEB-INF/template/sidebar.xhtml" />
 		</ui:insert>
+		<!--end::Sidebar-->
+		<div class="app-main-wrapper">
+			<!--begin::Header-->
+			<ui:insert name="navBar">
+				<ui:include src="/WEB-INF/template/navbar.xhtml" />
+			</ui:insert>
+			<!--end::Header-->
+			<!--begin::App Main-->
+			<main class="app-main"><!--begin::App Content Header-->
+			<div class="app-content-header">
+				<!--begin::Container-->
+				<div class="container-fluid">
 
-		<!--begin::App Main-->
-		<main class="app-main"><!--begin::App Content Header-->
-
-		<div class="app-content-header">
-			<!--begin::Container-->
-			<div class="container-fluid">
-
-				<!--begin::Row-->
-				<div class="row">
-					<div class="col-sm-6">
-						<h3 class="mb-0">
-							<ui:insert name="pageHeader">AdminLTE v4</ui:insert>
-						</h3>
+					<!--begin::Row-->
+					<div class="row">
+						<div class="col-sm-6">
+							<h3 class="mb-0">
+								<ui:insert name="pageHeader">AdminLTE v4</ui:insert>
+							</h3>
+						</div>
+						<div class="col-sm-6">
+							<ui:insert name="breadCrumb">
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+							</ui:insert>
+						</div>
 					</div>
-					<div class="col-sm-6">
-						<ui:insert name="breadCrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-						</ui:insert>
-					</div>
+					<!--end::Row-->
 				</div>
-				<!--end::Row-->
+				<!--end::Container-->
 			</div>
-			<!--end::Container-->
-		</div>
-		<!--end::App Content Header--> <!--begin::App Content-->
-		<div class="app-content">
-			<!--begin::Container-->
-			<div class="container-fluid">
-				<ui:insert name="main">Bem Vindo!</ui:insert>
+			<!--end::App Content Header--><!--begin::App Content-->
+			<div class="app-content">
+				<!--begin::Container-->
+				<div class="container-fluid">
+					<ui:insert name="main">Bem Vindo!</ui:insert>
+				</div>
+				<!--end::Container-->
 			</div>
-			<!--end::Container-->
+			<!--end::App Content--> </main>
+			<!--end::App Main-->
+			
+			<ui:insert name="bottomArea">									
+			</ui:insert>
+				
+			<!--begin::Footer-->
+			<footer class="app-footer"><!--begin::To the end-->
+			<div class="float-end d-none d-sm-inline">Anything you want</div>
+			<!--end::To the end--><!--begin::Copyright--> <strong>
+				Copyright &copy; 2014-2023&nbsp; <a href="https://adminlte.io"
+				class="text-decoration-none">AdminLTE.io</a>.
+			</strong> All rights reserved. <!--end::Copyright--> </footer>
+			<!--end::Footer-->				
+			
 		</div>
-		<!--end::App Content--> </main>
-		<!--end::App Main-->
-		<!--begin::Footer-->
-		<footer class="app-footer"><!--begin::To the end-->
-		<div class="float-end d-none d-sm-inline">Anything you want</div>
-		<!--end::To the end--><!--begin::Copyright--> <strong>
-			Copyright © 2014-2023&nbsp; <a href="https://adminlte.io"
-			class="text-decoration-none">AdminLTE.io</a>.
-		</strong> All rights reserved. <!--end::Copyright--></footer>
-		<!--end::Footer-->
-		<div class="sidebar-overlay"></div>
 	</div>
+	<!--end::App Wrapper-->
+	<!--begin::Script-->
+	<!--begin::Third Party Plugin(OverlayScrollbars)-->
 
 
 	<script
@@ -106,10 +114,12 @@
 		crossorigin="anonymous"></script>
 
 	<script src="#{request.getContextPath()}/js/adminlte/adminlte.min.js"></script>
-	<script src="#{request.getContextPath()}/js/bootstrap/bootstrap.bundle.min.js"></script>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	
+	<script
+		src="#{request.getContextPath()}/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 	<!-- Algumas variaveis do java para javascript -->
 	<script>
 		var contextPath = '#{request.getContextPath()}';		

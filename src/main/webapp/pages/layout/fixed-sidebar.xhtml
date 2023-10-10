@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition
+	template="/WEB-INF/template/fixed-sidebar-template.xhtml">
+
+	<ui:define name="estilos">
+
+	</ui:define>
+
+	<ui:define name="pageTitle">AdminLTE v4 | Fixed Sidebar</ui:define>
+	<ui:define name="pageHeader">Fixed Sidebar</ui:define>
+	<ui:define name="breadCrumb">
+
+		<ol class="breadcrumb float-sm-end">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Fixed
+				Layout</li>
+		</ol>
+
+	</ui:define>
+	<ui:define name="main">
+
+		<!--begin::Row-->
+		<div class="row">
+			<div class="col-12">
+				<!-- Default box -->
+				<div class="card">
+					<div class="card-header">
+						<h3 class="card-title">Title</h3>
+						<div class="card-tools">
+							<button type="button" class="btn btn-tool"
+								data-lte-toggle="card-collapse" title="Collapse">
+								<i data-lte-icon="expand" class="bi bi-plus-lg"></i><i
+									data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+							</button>
+							<button type="button" class="btn btn-tool"
+								data-lte-toggle="card-remove" title="Remove">
+								<i class="bi bi-x-lg"></i>
+							</button>
+						</div>
+					</div>
+					<div class="card-body">Start creating your amazing
+						application!</div>
+					<!-- /.card-body -->
+					<div class="card-footer">Footer</div>
+					<!-- /.card-footer-->
+				</div>
+				<!-- /.card -->
+			</div>
+		</div>
+		<!--end::Row-->
+
+	</ui:define>
+
+	<ui:define name="scripts">
+
+	</ui:define>
+</ui:composition>
+</html>
